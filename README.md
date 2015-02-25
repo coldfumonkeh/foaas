@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/coldfumonkeh/foaas.svg)](https://travis-ci.org/coldfumonkeh/foaas)
+
 # FOAAS Module
 
 This is an open source Node module wrapper to interact with the [FOAAS](foaas.herokuapp.com) API.
