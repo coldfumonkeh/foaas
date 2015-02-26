@@ -2,7 +2,7 @@
 
 # FOAAS Module
 
-This is an open source Node module wrapper to interact with the [FOAAS](foaas.herokuapp.com) API.
+This is an open source Node module wrapper to interact with the [FOAAS](http://foaas.herokuapp.com/) API.
 
 ## Installation
 
