@@ -186,7 +186,7 @@ function foaas() {
   }
 
   this.caniuse = function(tool, from, options) {
-    return _makeRequest('/cainiuse/' + tool + '/' + from, options);
+    return _makeRequest('/caniuse/' + tool + '/' + from, options);
   }
 
   this.bye = function(from, options) {
