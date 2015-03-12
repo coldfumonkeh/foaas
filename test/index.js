@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('returns the version details from the API', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 0.1.4 FOAAS');
+      data.should.equal('Version 0.1.5 FOAAS');
     });
   });
 
@@ -218,6 +218,18 @@ describe('#foaas', function() {
   it('SHOUTS this is awesome in Spanish', function() {
     return foaas.awesome('Macklemore', {type: 'plain', shoutcast: true, i18n: 'es'}).then(function(data) {
       data.should.equal('Esto es jodidamente increíble. - Macklemore');
+    });
+  });
+
+  it('will either invite you in or invite you out, Tucker style', function() {
+    return foaas.tucker('Malcolm Tucker', {type: 'plain'}).then(function(data) {
+      data.should.equal('Come the fuck in or fuck the fuck off. - Malcolm Tucker');
+    });
+  });
+
+  it('will tell you to choke on a bucket of cocks', function() {
+    return foaas.bucket('Anon', {type: 'plain'}).then(function(data) {
+      data.should.equal('Please choke on a bucket of cocks. - Anon');
     });
   });
 

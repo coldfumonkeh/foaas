@@ -209,6 +209,14 @@ function foaas() {
     return _makeRequest('/awesome/' + from, options);
   }
 
+  this.tucker = function(from, options) {
+    return _makeRequest('/tucker/' + from, options);
+  }
+
+  this.bucket = function(from, options) {
+    return _makeRequest('/bucket/' + from, options);
+  }
+
 
 };
 

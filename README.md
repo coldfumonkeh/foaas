@@ -22,12 +22,12 @@ This is an open source Node module wrapper to interact with the [FOAAS](http://f
       ...
     });
 
-    // Response is is UPPERCASE
+    // Response is in UPPERCASE
     foaas.awesome('Macklemore', {type: 'json', shoutcast: true}).then(function(data) {
       ...
     });
 
-    // Response is is UPPERCASE AND Spanish
+    // Response is in UPPERCASE AND Spanish
     foaas.awesome('Macklemore', {type: 'json', shoutcast: true, i18n: 'es'}).then(function(data) {
       ...
     });
