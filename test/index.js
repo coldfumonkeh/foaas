@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('returns the version details from the API', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 0.1.5 FOAAS');
+      data.should.equal('Version 0.1.6 FOAAS');
     });
   });
 
