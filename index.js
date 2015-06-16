@@ -217,6 +217,18 @@ function foaas() {
     return _makeRequest('/bucket/' + from, options);
   }
 
+  this.family = function(from, options) {
+    return _makeRequest('/family/' + from, options);
+  }
+
+  this.shutup = function(name, from, options) {
+    return _makeRequest('/shutup/' + name + '/' + from, options);
+  }
+
+  this.zayn = function(from, options) {
+    return _makeRequest('/zayn/' + from, options);
+  }
+
 
 };
 

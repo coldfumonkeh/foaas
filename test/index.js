@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('returns the version details from the API', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 0.1.6 FOAAS');
+      data.should.equal('Version 0.1.7 FOAAS');
     });
   });
 
@@ -232,5 +232,24 @@ describe('#foaas', function() {
       data.should.equal('Please choke on a bucket of cocks. - Anon');
     });
   });
+
+  it('will tell you, your family and your pets to go away', function() {
+    return foaas.family('Anon', {type: 'plain'}).then(function(data) {
+      data.should.equal('Fuck you, your whole family, your pets, and your feces. - Anon');
+    });
+  });
+
+  it('will tell you to shut up', function() {
+    return foaas.shutup('Tom', 'Chris', {type: 'plain'}).then(function(data) {
+      data.should.equal('Tom, shut the fuck up. - Chris');
+    });
+  });
+
+  it('will tell you to ask it if it cares', function() {
+    return foaas.zayn('Anon', {type: 'plain'}).then(function(data) {
+      data.should.equal('Ask me if I give a motherfuck ?!! - Anon');
+    });
+  });
+
 
 });
