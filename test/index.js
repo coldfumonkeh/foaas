@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('returns the version details from the API', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 0.1.7 FOAAS');
+      data.should.equal('Version 0.1.8 FOAAS');
     });
   });
 
@@ -211,13 +211,13 @@ describe('#foaas', function() {
 
   it('says this is awesome in Spanish', function() {
     return foaas.awesome('Macklemore', {type: 'plain', i18n: 'es'}).then(function(data) {
-      data.should.equal('Esto es jodidamente increíble. - Macklemore');
+      data.should.equal('Esto es jodidamente impresionante. - Macklemore');
     });
   });
 
   it('SHOUTS this is awesome in Spanish', function() {
-    return foaas.awesome('Macklemore', {type: 'plain', shoutcast: true, i18n: 'es'}).then(function(data) {
-      data.should.equal('Esto es jodidamente increíble. - Macklemore');
+    return foaas.awesome('Macklemore', {type: 'plain', shoutcloud: true, i18n: 'es'}).then(function(data) {
+      data.should.equal('ESTO ES JODIDAMENTE IMPRESIONANTE. - MACKLEMORE');
     });
   });
 
@@ -250,6 +250,28 @@ describe('#foaas', function() {
       data.should.equal('Ask me if I give a motherfuck ?!! - Anon');
     });
   });
+
+  it('will tell you to do something', function() {
+    return foaas.dosomething('Tidy','house','Anon', {type: 'plain'}).then(function(data) {
+      data.should.equal('Tidy the fucking house! - Anon');
+    });
+  });
+
+
+  it('will ask you about thumbs and caring', function() {
+    return foaas.thumbs('This Guy', 'Bob Kelso', {type: 'plain'}).then(function(data) {
+      data.should.equal("Who has two thumbs and doesn't give a fuck? This Guy. - Bob Kelso");
+    });
+  });
+
+  it('will call you a fucktard', function() {
+    return foaas.retard('Dave', {type: 'plain'}).then(function(data) {
+      data.should.equal('You Fucktard! - Dave');
+    });
+  });
+
+
+
 
 
 });

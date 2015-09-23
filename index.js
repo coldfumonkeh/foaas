@@ -229,6 +229,18 @@ function foaas() {
     return _makeRequest('/zayn/' + from, options);
   }
 
+  this.dosomething = function(action, something, from, options) {
+    return _makeRequest('/dosomething/' + action + '/' + something + '/' + from, options);
+  }
+
+  this.thumbs = function(thisguy, from, options) {
+    return _makeRequest('/thumbs/' + thisguy + '/' + from, options);
+  }
+
+  this.retard = function(from, options) {
+    return _makeRequest('/retard/' + from, options);
+  }
+
 
 };
 
