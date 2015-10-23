@@ -211,13 +211,13 @@ describe('#foaas', function() {
 
   it('says this is awesome in Spanish', function() {
     return foaas.awesome('Macklemore', {type: 'plain', i18n: 'es'}).then(function(data) {
-      data.should.equal('Esto es jodidamente impresionante. - Macklemore');
+      data.should.equal('Esto es jodidamente increíble. - Macklemore');
     });
   });
 
   it('SHOUTS this is awesome in Spanish', function() {
     return foaas.awesome('Macklemore', {type: 'plain', shoutcloud: true, i18n: 'es'}).then(function(data) {
-      data.should.equal('ESTO ES JODIDAMENTE IMPRESIONANTE. - MACKLEMORE');
+      data.should.equal('ESTO ES JODIDAMENTE INCREÍBLE. - MACKLEMORE');
     });
   });
 
