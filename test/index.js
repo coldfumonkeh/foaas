@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('returns the version details from the API', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 0.1.8 FOAAS');
+      data.should.equal('Version 0.1.9 FOAAS');
     });
   });
 
@@ -270,8 +270,17 @@ describe('#foaas', function() {
     });
   });
 
+  it('will be greedy', function() {
+    return foaas.greed('happiness', 'Dave', {type: 'plain'}).then(function(data) {
+      data.should.equal('The point is, ladies and gentleman, that happiness -- for lack of a better word -- is good. happiness is right. happiness works. happiness clarifies, cuts through, and captures the essence of the evolutionary spirit. happiness, in all of its forms -- happiness for life, for money, for love, knowledge -- has marked the upward surge of mankind. - Dave');
+    });
+  });
 
-
+  it('will wish you a good morning', function() {
+    return foaas.mornin('Hamilton', {type: 'plain'}).then(function(data) {
+      data.should.equal('Happy fuckin\' Mornin\'! - Hamilton');
+    });
+  });
 
 
 });

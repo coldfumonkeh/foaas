@@ -241,6 +241,13 @@ function foaas() {
     return _makeRequest('/retard/' + from, options);
   }
 
+  this.greed = function(noun, from) {
+    return _makeRequest('/greed/' + noun + '/' + from);
+  }
+
+  this.mornin = function(from) {
+    return _makeRequest('/mornin/'  + from);
+  }
 
 };
 
