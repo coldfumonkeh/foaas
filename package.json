@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "test:nyan": "./node_modules/.bin/mocha --reporter nyan"
+    "nyan": "./node_modules/.bin/mocha --reporter nyan"
   },
   "repository": {
     "type": "git",

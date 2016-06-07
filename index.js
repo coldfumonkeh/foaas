@@ -289,20 +289,20 @@ function foaas() {
     return _makeRequest('/look/' + name + '/' + from, options);
   }
 
-  this.looking = function(name, from, options) {
-    return _makeRequest('/looking/' + name + '/' + from, options);
+  this.looking = function(from, options) {
+    return _makeRequest('/looking/' + from, options);
   }
 
-  this.no = function(name, from, options) {
-    return _makeRequest('/no/' + name + '/' + from, options);
+  this.no = function(from, options) {
+    return _makeRequest('/no/' + from, options);
   }
 
-  this.give = function(name, from, options) {
-    return _makeRequest('/give/' + name + '/' + from, options);
+  this.give = function(from, options) {
+    return _makeRequest('/give/' + from, options);
   }
 
-  this.zero = function(name, from, options) {
-    return _makeRequest('/zero/' + name + '/' + from, options);
+  this.zero = function(from, options) {
+    return _makeRequest('/zero/' + from, options);
   }
 
   this.pulp = function(language, from, options) {

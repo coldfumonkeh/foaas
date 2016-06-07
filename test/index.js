@@ -29,19 +29,19 @@ describe('#foaas', function() {
     });
   });
 
-  it('/that/:from, from Chris', function() {
+  it('/that/:from', function() {
     return foaas.that('Chris', {type: 'plain'}).then(function(data) {
       data.should.equal('Fuck that. - Chris');
     });
   });
 
-  it('/everything/:from, from Chris', function() {
+  it('/everything/:from', function() {
     return foaas.everything('Chris', {type: 'plain'}).then(function(data) {
       data.should.equal('Fuck everything. - Chris');
     });
   });
 
-  it('/everyone/:from, from Chris', function() {
+  it('/everyone/:from', function() {
     return foaas.everyone('Chris', {type: 'plain'}).then(function(data) {
       data.should.equal('Everyone can go and fuck off. - Chris');
     });
@@ -341,26 +341,26 @@ describe('#foaas', function() {
     });
   });
 
-  it('/looking/:name/:from', function() {
-    return foaas.looking('Private', 'Sergeant Smith', {type: 'plain'}).then(function(data) {
+  it('/looking/:from', function() {
+    return foaas.looking('Sergeant Smith', {type: 'plain'}).then(function(data) {
       data.should.equal('Looking for a fuck to give. - Sergeant Smith');
     });
   });
 
-  it('/no/:name/:from', function() {
-    return foaas.no('Private', 'Sergeant Smith', {type: 'plain'}).then(function(data) {
+  it('/no/:from', function() {
+    return foaas.no('Sergeant Smith', {type: 'plain'}).then(function(data) {
       data.should.equal('No fucks given. - Sergeant Smith');
     });
   });
 
-  it('/give/:name/:from', function() {
-    return foaas.give('Private', 'Sergeant Smith', {type: 'plain'}).then(function(data) {
+  it('/give/:from', function() {
+    return foaas.give('Sergeant Smith', {type: 'plain'}).then(function(data) {
       data.should.equal('I give zero fucks. - Sergeant Smith');
     });
   });
 
-  it('/zero/:name/:from', function() {
-    return foaas.zero('Private', 'Sergeant Smith', {type: 'plain'}).then(function(data) {
+  it('/zero/:from', function() {
+    return foaas.zero('Sergeant Smith', {type: 'plain'}).then(function(data) {
       data.should.equal('Zero, thats the number of fucks I give. - Sergeant Smith');
     });
   });
