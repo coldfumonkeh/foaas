@@ -205,6 +205,10 @@ function foaas() {
     return _makeRequest('/xmas/' + name + '/' + from, options);
   }
 
+  this.bday = function(name, from, options) {
+    return _makeRequest('/bday/' + name + '/' + from, options);
+  }
+
   this.awesome = function(from, options) {
     return _makeRequest('/awesome/' + from, options);
   }
@@ -229,8 +233,16 @@ function foaas() {
     return _makeRequest('/zayn/' + from, options);
   }
 
+  this.keepcalm = function(reaction, from, options) {
+    return _makeRequest('/keepcalm/' + reaction + '/' + from, options);
+  }
+
   this.dosomething = function(action, something, from, options) {
     return _makeRequest('/dosomething/' + action + '/' + something + '/' + from, options);
+  }
+
+  this.mornin = function(from, options) {
+    return _makeRequest('/mornin/' + from, options);
   }
 
   this.thumbs = function(thisguy, from, options) {
@@ -241,12 +253,68 @@ function foaas() {
     return _makeRequest('/retard/' + from, options);
   }
 
-  this.greed = function(noun, from) {
-    return _makeRequest('/greed/' + noun + '/' + from);
+  this.greed = function(noun, from, options) {
+    return _makeRequest('/greed/' + noun + '/' + from, options);
   }
 
-  this.mornin = function(from) {
-    return _makeRequest('/mornin/'  + from);
+  this.bm = function(name, from, options) {
+    return _makeRequest('/bm/' + name + '/' + from, options);
+  }
+
+  this.gfy = function(name, from, options) {
+    return _makeRequest('/gfy/' + name + '/' + from, options);
+  }
+
+  this.me = function(from, options) {
+    return _makeRequest('/me/' + from, options);
+  }
+
+  this.back = function(name, from, options) {
+    return _makeRequest('/back/' + name + '/' + from, options);
+  }
+
+  this.think = function(name, from, options) {
+    return _makeRequest('/think/' + name + '/' + from, options);
+  }
+
+  this.keep = function(name, from, options) {
+    return _makeRequest('/keep/' + name + '/' + from, options);
+  }
+
+  this.single = function(from, options) {
+    return _makeRequest('/single/' + from, options);
+  }
+
+  this.look = function(name, from, options) {
+    return _makeRequest('/look/' + name + '/' + from, options);
+  }
+
+  this.looking = function(name, from, options) {
+    return _makeRequest('/looking/' + name + '/' + from, options);
+  }
+
+  this.no = function(name, from, options) {
+    return _makeRequest('/no/' + name + '/' + from, options);
+  }
+
+  this.give = function(name, from, options) {
+    return _makeRequest('/give/' + name + '/' + from, options);
+  }
+
+  this.zero = function(name, from, options) {
+    return _makeRequest('/zero/' + name + '/' + from, options);
+  }
+
+  this.pulp = function(language, from, options) {
+    return _makeRequest('/pulp/' + language + '/' + from, options);
+  }
+
+  this.sake = function(from, options) {
+    return _makeRequest('/sake/' + from, options);
+  }
+
+  this.anyway = function(company, from, options) {
+    return _makeRequest('/anyway/' + company + '/' + from, options);
   }
 
 };
