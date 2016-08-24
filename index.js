@@ -317,6 +317,34 @@ function foaas() {
     return _makeRequest('/anyway/' + company + '/' + from, options);
   }
 
+  this.maybe = function(from, options) {
+    return _makeRequest('/maybe/' + from, options);
+  }
+
+  this.blackadder = function(name, from, options) {
+    return _makeRequest('/blackadder/' + name + '/' + from, options);
+  }
+
+  this.horse = function(from, options) {
+    return _makeRequest('/horse/' + from, options);
+  }
+
+  this.deraadt = function(name, from, options) {
+    return _makeRequest('/deraadt/' + name + '/' + from, options);
+  }
+
+  this.problem = function(name, from, options) {
+    return _makeRequest('/problem/' + name + '/' + from, options);
+  }
+
+  this.cocksplat = function(name, from, options) {
+    return _makeRequest('/cocksplat/' + name + '/' + from, options);
+  }
+
+  this.too = function(from, options) {
+    return _makeRequest('/too/' + from, options);
+  }
+
 };
 
 

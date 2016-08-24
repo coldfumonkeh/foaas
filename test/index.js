@@ -7,7 +7,7 @@ describe('#foaas', function() {
 
   it('/version', function() {
     return foaas.getVersion({type: 'plain'}).then(function(data) {
-      data.should.equal('Version 1.0.0 FOAAS');
+      data.should.equal('Version 1.1.0 FOAAS');
     });
   });
 
@@ -380,6 +380,48 @@ describe('#foaas', function() {
   it('/anyway/:company/:from', function() {
     return foaas.anyway('EFF', 'John', {type: 'plain'}).then(function(data) {
       data.should.equal('Who the fuck are you anyway, EFF, why are you stirring up so much trouble, and, who pays you? - John');
+    });
+  });
+
+  it('/maybe/:from', function() {
+    return foaas.maybe('John', {type: 'plain'}).then(function(data) {
+      data.should.equal('Maybe. Maybe not. Maybe fuck yourself. - John');
+    });
+  });
+
+  it('/blackadder/:name/:from', function() {
+    return foaas.blackadder('Baldrick', 'Edmund', {type: 'plain'}).then(function(data) {
+      data.should.equal('Baldrick, your head is as empty as a eunuch’s underpants. Fuck off! - Edmund');
+    });
+  });
+
+  it('/horse/:from', function() {
+    return foaas.horse('John', {type: 'plain'}).then(function(data) {
+      data.should.equal('Fuck you and the horse you rode in on. - John');
+    });
+  });
+
+  it('/deraadt/:name/:from', function() {
+    return foaas.deraadt('Dave', 'John', {type: 'plain'}).then(function(data) {
+      data.should.equal('Dave you are being the usual slimy hypocritical asshole... You may have had value ten years ago, but people will see that you don\'t anymore. - John');
+    });
+  });
+
+  it('/problem/:name/:from', function() {
+    return foaas.problem('Dave', 'John', {type: 'plain'}).then(function(data) {
+      data.should.equal('What the fuck is you problem Dave? - John');
+    });
+  });
+
+  it('/cocksplat/:name/:from', function() {
+    return foaas.cocksplat('Dave', 'John', {type: 'plain'}).then(function(data) {
+      data.should.equal('Fuck off Dave, you worthless cocksplat - John');
+    });
+  });
+
+  it('/too/:from', function() {
+    return foaas.too('John', {type: 'plain'}).then(function(data) {
+      data.should.equal('Thanks, fuck you too. - John');
     });
   });
 
